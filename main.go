@@ -2,12 +2,19 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
-	array("1", "2", "3", "4", "5")
+	length, upper := lenAndUpper("juno")
+	fmt.Println("length =", length)
+	fmt.Println("upper =", upper)
 }
 
-func array(name ...string) {
-	fmt.Println(name)
+func lenAndUpper(name string) (length int, upper string) {
+	defer fmt.Println("lenAndUpper end !")
+	fmt.Println("lenAndUpper start !")
+	length = len(name)
+	upper = strings.ToUpper(name)
+	return
 }
