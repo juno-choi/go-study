@@ -5,12 +5,13 @@ import (
 )
 
 func main() {
-	array(5, 4, 3, 2, 1)
+	loop()
 }
 
-func array(numbers ...int) int {
-	for i := 0; i < len(numbers); i++ {
-		fmt.Println(numbers[i])
+func loop() {
+	fmt.Println("무한 루프 시작")
+	for true {
+
 	}
-	return 1
+	fmt.Println("무한 루프 종료")
 }
