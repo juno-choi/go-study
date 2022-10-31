@@ -1,22 +1,40 @@
 package main
 
 import (
+	"errors"
 	"fmt"
-
-	"github.com/project/helloworld/mydict"
+	"net/http"
 )
 
-func main() {
-	dictionary := mydict.Dictionary{}
-	baseWord := "hello"
+var errRequestFail = errors.New("Request Fail")
 
-	dictionary.Add(baseWord, "hello~")
-	word, _ := dictionary.Search(baseWord)
-	fmt.Println(word)
-	dictionary.Delete(baseWord)
-	word2, err := dictionary.Search(baseWord)
-	if err != nil {
-		fmt.Println(err)
+func main() {
+	var results = make(map[string]string)
+
+	urls := []string{
+		"https://www.google.com",
+		"https://www.facebook.com",
+		"https://www.naver.com",
 	}
-	fmt.Println(word2)
+
+	for _, url := range urls {
+		result := "OK"
+		err := hitURL(url)
+		if err != nil {
+			result = "FAILED"
+		}
+		results[url] = result
+	}
+	for url, result := range results {
+		fmt.Println(url, result)
+	}
+}
+
+func hitURL(url string) error {
+	fmt.Println("check url :", url)
+	resp, err := http.Get(url)
+	if err != nil || resp.StatusCode >= 400 {
+		return errRequestFail
+	}
+	return nil
 }
