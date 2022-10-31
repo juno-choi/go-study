@@ -3,16 +3,20 @@ package main
 import (
 	"fmt"
 
-	"github.com/project/helloworld/accounts"
+	"github.com/project/helloworld/mydict"
 )
 
 func main() {
-	account := accounts.NewAccount("juno")
-	account.Deposit(10)
-	err := account.Withdraw(20)
+	dictionary := mydict.Dictionary{}
+	baseWord := "hello"
+
+	dictionary.Add(baseWord, "hello~")
+	word, _ := dictionary.Search(baseWord)
+	fmt.Println(word)
+	dictionary.Delete(baseWord)
+	word2, err := dictionary.Search(baseWord)
 	if err != nil {
 		fmt.Println(err)
 	}
-
-	fmt.Println(account.Balance(), account.Owner())
+	fmt.Println(word2)
 }
