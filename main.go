@@ -5,8 +5,7 @@ import (
 )
 
 func main() {
-	a := 5
-	b := &a
-	*b = 20
-	fmt.Println(a, *b)
+	names := []string{"juno", "juno2", "juno3"}
+
+	fmt.Println(names)
 }
