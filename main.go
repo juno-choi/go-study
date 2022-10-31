@@ -5,13 +5,13 @@ import (
 )
 
 func main() {
-	loop()
+	fmt.Println(canIDrink(16))
 }
 
-func loop() {
-	fmt.Println("무한 루프 시작")
-	for true {
+func canIDrink(age int) bool {
 
+	if koreanAge := age + 2; koreanAge < 18 {
+		return false
 	}
-	fmt.Println("무한 루프 종료")
+	return true
 }
