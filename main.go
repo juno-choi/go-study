@@ -5,15 +5,8 @@ import (
 )
 
 func main() {
-	fmt.Println(zeroOrOne(1))
-}
-
-func zeroOrOne(number int) string {
-	switch badNumber := number + 2; badNumber {
-	case 0:
-		return "zero"
-	case 1:
-		return "one"
-	}
-	return "bad request"
+	a := 5
+	b := &a
+	*b = 20
+	fmt.Println(a, *b)
 }
