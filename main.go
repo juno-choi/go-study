@@ -5,7 +5,8 @@ import (
 )
 
 func main() {
-	names := []string{"juno", "juno2", "juno3"}
-
-	fmt.Println(names)
+	names := map[string]string{"key": "value", "key2": "value2", "key3": "value3"}
+	for key, value := range names {
+		fmt.Println(key, value)
+	}
 }
