@@ -4,9 +4,14 @@ import (
 	"fmt"
 )
 
+type person struct {
+	name string
+	age  int
+	hoby []string
+}
+
 func main() {
-	names := map[string]string{"key": "value", "key2": "value2", "key3": "value3"}
-	for key, value := range names {
-		fmt.Println(key, value)
-	}
+	hoby := []string{"sing", "golf"}
+	juno := person{name: "juno", age: 20, hoby: hoby}
+	fmt.Println(juno)
 }
