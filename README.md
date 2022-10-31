@@ -10,3 +10,5 @@
 [Go 설치하기 및 hello world 찍어보기!](https://velog.io/@ililil9482/Go-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0)
 
 [go 변수와 상수 및 function](https://velog.io/@ililil9482/go-%EB%B3%80%EC%88%98%EC%99%80-%EC%83%81%EC%88%98-%EB%B0%8F-function)
+
+[go 반복문과 조건문](https://velog.io/@ililil9482/go-%EB%B0%98%EB%B3%B5%EB%AC%B8%EA%B3%BC-%EC%A1%B0%EA%B1%B4%EB%AC%B8)
