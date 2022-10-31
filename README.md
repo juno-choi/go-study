@@ -16,3 +16,5 @@
 [go Pointer](https://velog.io/@ililil9482/go-Pointer)
 
 [go 자료구조](https://velog.io/@ililil9482/go-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0)
+
+[Bank Project로 실습 (W. struct, method)](https://velog.io/@ililil9482/Bank-Project%EB%A1%9C-%EC%8B%A4%EC%8A%B5-w.-struct-method)

@@ -2,16 +2,17 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/project/helloworld/accounts"
 )
 
-type person struct {
-	name string
-	age  int
-	hoby []string
-}
-
 func main() {
-	hoby := []string{"sing", "golf"}
-	juno := person{name: "juno", age: 20, hoby: hoby}
-	fmt.Println(juno)
+	account := accounts.NewAccount("juno")
+	account.Deposit(10)
+	err := account.Withdraw(20)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Println(account.Balance(), account.Owner())
 }
