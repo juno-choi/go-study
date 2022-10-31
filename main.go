@@ -5,13 +5,15 @@ import (
 )
 
 func main() {
-	fmt.Println(canIDrink(16))
+	fmt.Println(zeroOrOne(1))
 }
 
-func canIDrink(age int) bool {
-
-	if koreanAge := age + 2; koreanAge < 18 {
-		return false
+func zeroOrOne(number int) string {
+	switch badNumber := number + 2; badNumber {
+	case 0:
+		return "zero"
+	case 1:
+		return "one"
 	}
-	return true
+	return "bad request"
 }
